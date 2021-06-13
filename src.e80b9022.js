@@ -11,8 +11,8 @@ module.exports=[{id:"XWaQXcbk0",name:"Картофель, запеченный �
 },{}],"yuI2":[function(require,module,exports) {
 "use strict";var e=u(require("../templates/cardsMarckup.hbs")),t=u(require("../menu.json"));function u(e){return e&&e.__esModule?e:{default:e}}const r=document.querySelector(".js-menu"),n=(0,e.default)(t.default);function a(t){return t.map(e.default)}a(t.default),r.insertAdjacentHTML("beforeend",n);
 },{"../templates/cardsMarckup.hbs":"h5KR","../menu.json":"mA8c"}],"Sq5u":[function(require,module,exports) {
-const e={LIGHT:"light-theme",DARK:"dark-theme"},t=document.querySelector("#theme-switch-toggle"),c=document.querySelector("body");function o(t){"theme-switch-toggle"===t.target.id&&(c.classList.toggle(e.LIGHT),c.classList.toggle(e.DARK),s(t))}function s(t){const c=t.target.checked;c&&localStorage.setItem("curent-theme",e.DARK),c||localStorage.setItem("curent-theme",e.LIGHT)}c.classList.add(e.LIGHT),t.addEventListener("change",o);const a=localStorage.getItem("curent-theme");a===e.DARK&&(t.chacked=!0,c.classList.add(e.DARK));
+const e={LIGHT:"light-theme",DARK:"dark-theme"},t=document.querySelector("#theme-switch-toggle"),c=document.querySelector("body"),o="curent-theme";function s(t){"theme-switch-toggle"===t.target.id&&(c.classList.toggle(e.LIGHT),c.classList.toggle(e.DARK),a(t))}function a(t){const c=t.target.checked;c&&localStorage.setItem(o,e.DARK),c||localStorage.setItem(o,e.LIGHT)}function n(){localStorage.getItem(o)===e.DARK&&(c.classList.add(e.DARK),c.classList.remove(e.LIGHT),t.checked=!0)}c.classList.add(e.LIGHT),t.addEventListener("change",s),document.addEventListener("DOMContentLoaded",n);
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/cardsMenu"),require("./js/switchTheme");
 },{"./sass/main.scss":"clu1","./js/cardsMenu":"yuI2","./js/switchTheme":"Sq5u"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-10-food-service/src.9ba95d0a.js.map
+//# sourceMappingURL=/goit-js-hw-10-food-service/src.e80b9022.js.map
